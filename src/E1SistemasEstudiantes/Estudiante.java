@@ -29,6 +29,6 @@ class Estudiante {
         }
 
         materias[cantMaterias] = nuevaMateria;
-        cantMaterias = cantMaterias + 1;
+        cantMaterias++;
     }
 }
