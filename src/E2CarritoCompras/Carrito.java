@@ -1,0 +1,34 @@
+﻿package E2CarritoCompras;
+
+public class Carrito {
+
+    private Producto[] productos;
+    private int cantActual;
+    private int capacidadMax;
+
+    Carrito(int capacidadMax){
+        this.capacidadMax = capacidadMax;
+        productos = new Producto[capacidadMax];
+        cantActual = 0;
+    }
+
+    void agregarProducto(Producto producto){
+             if(cantActual < capacidadMax){
+                 productos[cantActual] = producto;
+                 cantActual++;
+             }
+
+             if(cantActual == capacidadMax){
+                 System.out.println("Carrito Lleno, No se puede agregar el producto ["+ producto.getNombre()+"]");
+             }
+    }
+
+    double calcularTotal(){
+        double total = 0.0;
+        for (int i = 0; i < capacidadMax; i++) {
+            total = total + productos[i].getPrecio();
+        }
+
+        return total;
+    }
+}
