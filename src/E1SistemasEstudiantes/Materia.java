@@ -1,4 +1,4 @@
-﻿package E1SistemasEstudiantes;
+package E1SistemasEstudiantes;
 
 class Materia {
 
