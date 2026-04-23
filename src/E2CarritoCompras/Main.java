@@ -8,11 +8,14 @@ public class Main {
         String op; boolean des=false; String nombre; int edad; String cedula;
         Bienvenida();
 
-        System.out.println("Ingrese El Nombre");
+        System.out.println("     Ingrese El Nombre");
         nombre = input.nextLine();
-        System.out.println("Ingrese La Edad");
+        System.out.println("     Ingrese La Edad");
         edad = input.nextInt();
-        System.out.println("Ingrese La Cedula");
+
+        input.nextLine(); // limpia de buffer
+
+        System.out.println("     Ingrese La Cedula");
         cedula = input.nextLine();
 
         Persona Cliente = new Persona(nombre, edad, cedula);
