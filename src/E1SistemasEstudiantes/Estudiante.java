@@ -23,6 +23,11 @@ class Estudiante {
     }
 
     void agregarMateria(Materia nuevaMateria){
+        if(cantMaterias == materias.length){
+            System.out.println("Error: Ha Llegado Al Maximo De Materias");
+            return;
+        }
+
         materias[cantMaterias] = nuevaMateria;
         cantMaterias = cantMaterias + 1;
     }
