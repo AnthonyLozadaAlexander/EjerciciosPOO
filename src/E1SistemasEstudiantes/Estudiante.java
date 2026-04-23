@@ -1,4 +1,4 @@
-﻿package E1SistemasEstudiantes;
+package E1SistemasEstudiantes;
 
 class Estudiante {
 
@@ -39,20 +39,20 @@ class Estudiante {
                 sumP = sumP + materias[i].getCalificacion();
             }
         }
-
-        return Prom = sumP/cantMaterias;
+        Prom = sumP/cantMaterias;
+        return Math.round(Prom * 100.0) / 100.0;
     }
 
     String mostrarInformacion(){
         StringBuilder info = new StringBuilder();
         for (int i = 0; i < materias.length; i++) {
-            info.append(materias[i].getNombre()).append("\n").append(materias[i].getCalificacion()).append("\n").append(materias[i].estaAprobado() ? "Aprobado" : "Reprobado");
+            info.append(materias[i].getNombre()).append("\n").append(materias[i].getCalificacion()).append("\n").append(materias[i].estaAprobado() ? "Aprobado\n\n" : "Reprobado\n\n");
 
         }
 
         return "Estudiante: " + getNombre() + "\n"
                 + "Matricula: " + getMatricula() + "\n" +
-                "Promedio: " + calcularPromedio() + "\n"
+                "Promedio: " + calcularPromedio() + "\n\n"
                 + info.toString();
     }
 }
