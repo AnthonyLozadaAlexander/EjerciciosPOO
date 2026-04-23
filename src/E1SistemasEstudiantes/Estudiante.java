@@ -6,14 +6,7 @@ class Estudiante {
     private String matricula;
     private Materia[] materias;
     private int cantMaterias;
-
-    Estudiante(){
-        materias = new Materia[3];
-        cantMaterias = 0;
-        nombre = "Desconocido";
-        matricula = "Desconocida";
-    }
-
+    
     Estudiante(String nombre, String matricula){
     this.nombre = nombre;
     this.matricula = matricula;
