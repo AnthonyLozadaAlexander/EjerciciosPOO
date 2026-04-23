@@ -5,8 +5,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String op; boolean des=false;
-        Persona Cliente = new Persona("Pedro", 19, "0745839211");
+        String op; boolean des=false; String nombre; int edad; String cedula;
+        Bienvenida();
+
+        System.out.println("Ingrese El Nombre");
+        nombre = input.nextLine();
+        System.out.println("Ingrese La Edad");
+        edad = input.nextInt();
+        System.out.println("Ingrese La Cedula");
+        cedula = input.nextLine();
+
+        Persona Cliente = new Persona(nombre, edad, cedula);
 
         Carrito carrito = new Carrito(5);
         Producto Tablet = new Producto(23, "Samsung S12", 450.00);
@@ -35,5 +44,10 @@ public class Main {
 
         System.out.println(carrito.mostrarTicket(des));
 
+    }
+    static void Bienvenida(){
+        System.out.println("--------------------------------");
+        System.out.println("Bienvenido Al Carrito De Compras");
+        System.out.println("--------------------------------");
     }
 }
