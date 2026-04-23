@@ -19,7 +19,8 @@ class Materia {
     }
 
     void setCalificacion(double nuevaCalificacion){
-        if(getCalificacion() >= 0 && getCalificacion() <= 10.0)
+
+        if(nuevaCalificacion >= 0 && nuevaCalificacion <= 10.0)
             this.calificacion = nuevaCalificacion;
         else
             System.out.println("Error: La Calificacion No Esta Entre 0 y 10");
