@@ -1,6 +1,6 @@
 package E2CarritoCompras;
 
-public class Carrito {
+class Carrito {
 
     private Producto[] productos;
     private int cantActual;
