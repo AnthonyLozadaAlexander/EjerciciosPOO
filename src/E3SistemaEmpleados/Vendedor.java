@@ -10,7 +10,7 @@ public class Vendedor extends Empleado{
         ventasRealizadas = 0;
     }
 
-    void RegistrarVentas(){
+    public void RegistrarVentas(){
         ventasRealizadas++;
     }
 
