@@ -10,13 +10,17 @@ public class Empleado {
         this.salarioBase = salarioBase;
     }
 
+    public String getNombre(){
+        return nombre;
+    }
+
     double calcularPago(){
         return salarioBase;
     }
 
     String mostrarDatos(){
         return "Datos Personales Del Empleado: \n" +
-                 "Nombre: " + nombre + "\n" +
+                 "Nombre: " + getNombre() + "\n" +
                  "Salario: " + calcularPago() + "\n";
     }
 }
