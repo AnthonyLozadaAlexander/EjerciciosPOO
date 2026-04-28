@@ -21,11 +21,11 @@ public class Main {
         for (int i = 0; i < e.length; i++) {
              // Polimorfismo
             e[i].calcularPago();
-            e[i].mostrarDatos();
+            System.out.println(e[i].mostrarDatos());
         }
 
-        sb.append("Empleado: " + "\n" + empleado.mostrarDatos() + "\n").append("Gerente: " + "\n" + gerente.mostrarDatos() + "\n").append("Vendedor: " + "\n" + vendedor.mostrarDatos());
+        // sb.append("Empleado: " + "\n" + empleado.mostrarDatos() + "\n").append("Gerente: " + "\n" + gerente.mostrarDatos() + "\n").append("Vendedor: " + "\n" + vendedor.mostrarDatos());
 
-        System.out.println(sb.toString());
+        // System.out.println(sb.toString());
     }
 }
