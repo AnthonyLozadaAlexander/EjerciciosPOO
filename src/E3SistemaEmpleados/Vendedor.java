@@ -1,12 +1,12 @@
-﻿package E3SistemaEmpleados;
+package E3SistemaEmpleados;
 
 public class Vendedor extends Empleado{
-    private double comisionPorVenta;
     private int ventasRealizadas;
+    private double porcentajeComision;
 
-    public Vendedor(String nombre, double salario, double comisionPorVenta){
+    public Vendedor(String nombre, double salario, double porcentajeComision){
         super(nombre, salario);
-        this.comisionPorVenta = comisionPorVenta;
+        this.porcentajeComision = (porcentajeComision/100);
         ventasRealizadas = 0;
     }
 
@@ -16,7 +16,7 @@ public class Vendedor extends Empleado{
 
     @Override
     public double calcularPago(){
-        return salarioBase + (comisionPorVenta * ventasRealizadas);
+        return salarioBase + (porcentajeComision * ventasRealizadas);
     }
 
 
