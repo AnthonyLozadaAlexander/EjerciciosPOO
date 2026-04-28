@@ -20,6 +20,10 @@ public class Libro {
         return autor;
     }
 
+    public boolean getDisponible(){
+        return disponible;
+    }
+
     public void prestar(){
         this.disponible = false;
     }
