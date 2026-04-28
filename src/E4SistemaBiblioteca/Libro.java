@@ -28,5 +28,4 @@ public class Libro {
         this.disponible = true;
     }
 
-
 }
