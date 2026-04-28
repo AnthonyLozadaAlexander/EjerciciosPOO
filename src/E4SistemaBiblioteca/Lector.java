@@ -1,4 +1,4 @@
-﻿package E4SistemaBiblioteca;
+package E4SistemaBiblioteca;
 
 public class Lector {
 
@@ -35,10 +35,16 @@ public class Lector {
         }
         for (int i = 0; i < librosPrestados.length; i++) {
         if(librosPrestados[i] != null){
-            System.out.println(librosPrestados[i].getTitulo());
+            System.out.println(librosPrestados[i].toString() +
+                               librosPrestados[i].getTitulo());
         }
         }
     }
 
+    @Override
+    public String toString(){
+        return "\nNombre: " + nombre + "\n" +
+                "Libros Prestados: " + cantLibros + "\n";
+    }
 
 }
