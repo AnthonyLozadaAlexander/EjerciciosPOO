@@ -14,12 +14,12 @@ public class Lector {
 
     void tomarPrestado(Libro libro){
         if(cantLibros == librosPrestados.length){ // si la cantLibros esta llena a la longitud del arreglo librosPrestados
-            System.out.println("Lector no puede llevar mas libros");
+            System.out.println("\nLector no puede llevar mas libros");
             return;
         }
 
         if(!(libro.getDisponible())){ // si el libro no esta disponible
-            System.out.println("El libro " + libro.getTitulo() + " no tiene disponibles");
+            System.out.println("\nEl libro " + libro.getTitulo() + " no tiene disponibles");
             return;
         }
 
@@ -27,7 +27,7 @@ public class Lector {
         librosPrestados[cantLibros] = libro;
         cantLibros++;
 
-        System.out.println(nombre + " ha tomado prestado el libro: " + libro.getTitulo());
+        System.out.println("\n" + nombre + " ha tomado prestado el libro: " + libro.getTitulo());
     }
 
     void mostrarLibros(){
@@ -45,7 +45,7 @@ public class Lector {
     @Override
     public String toString(){
         return "\n\nNombre: " + nombre + "\n" +
-                "Libros Prestados: " + cantLibros + "\n";
+                "Libros Prestados: " + cantLibros + "\n\n";
     }
 
 }
