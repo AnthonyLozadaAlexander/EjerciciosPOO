@@ -34,7 +34,7 @@ class Libro {
 
     @Override
     public String toString(){
-        return "Titulo: " + titulo + "\n" +
+        return "\nTitulo: " + titulo + "\n" +
                 "Autor: " + autor + "\n" +
                 "Disponible: " + disponible + "\n";
     }
