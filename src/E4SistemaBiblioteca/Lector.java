@@ -20,6 +20,7 @@ public class Lector {
 
         if(!(libro.getDisponible())){ // si el libro no esta disponible
             System.out.println("El libro " + libro.getTitulo() + " no tiene disponibles");
+            return;
         }
 
         libro.prestar();
@@ -43,7 +44,7 @@ public class Lector {
 
     @Override
     public String toString(){
-        return "\nNombre: " + nombre + "\n" +
+        return "\n\nNombre: " + nombre + "\n" +
                 "Libros Prestados: " + cantLibros + "\n";
     }
 
