@@ -1,4 +1,4 @@
-﻿package E5;
+package E5;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,5 +7,7 @@ public class Main {
 
         credito.procesarPago(200.41);
         paypal.procesarPago(120.43);
+
+
     }
 }
