@@ -18,16 +18,20 @@ public class Main {
             System.out.println("1. Tarjeta De Credito");
             System.out.println("2. Paypal");
             System.out.println("3. Salir");
+            System.out.println("-----------------------------------------------");
             opc = input.nextLine();
             switch(opc){
                 case "1":
-                    System.out.print("Ingrese Su Nombre: ");
-                    titular = input.nextLine();
-                    System.out.print("Ingrese La Fecha De Experiacion: ");
-                    fechaExperiacion = input.nextLine();
-                    System.out.print("Ingrese Su Monto: ");
-                    cvv = input.nextInt();
-                    input.nextLine();
+                    do {
+                        System.out.print("Ingrese Su Nombre: ");
+                        titular = input.nextLine();
+                        System.out.print("Ingrese La Fecha De Experiacion: ");
+                        fechaExperiacion = input.nextLine();
+                        System.out.print("Ingrese Su Monto: ");
+                        cvv = validarInt(input);
+                        input.nextLine();
+
+                    }while(cvv == -1);
 
                     TarjetaCredito credito = new TarjetaCredito(titular, fechaExperiacion, cvv);
                     credito.procesarPago(200.41);
@@ -47,7 +51,6 @@ public class Main {
                     break;
                 default:
                     System.out.println("Opcion Invalida");
-                    salir = false;
                     break;
             }
         }while(salir == false);
@@ -57,5 +60,15 @@ public class Main {
         long tiempoTotal = fin - Inicio;
         System.out.println("Tiempo Total: " + tiempoTotal + " ns");
 
+    }
+
+    static int validarInt(Scanner input){
+        if(!input.hasNextInt()){
+            System.out.println("Error: Formato Invalido");
+            System.out.println("Presiona ENTER para continuar");
+            input.nextLine();
+            return -1;
+        }
+        return input.nextInt();
     }
 }
