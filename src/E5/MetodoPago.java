@@ -1,4 +1,4 @@
-﻿package E5;
+package E5;
 
 public abstract class MetodoPago implements Procesable {
     private String titular;
@@ -6,7 +6,7 @@ public abstract class MetodoPago implements Procesable {
 
     public MetodoPago(String titular){
         this.titular = titular;
-        this.numTransaccion = (int) (Math.random() * 1000);
+        this.numTransaccion = (int) (Math.random() * 1000); // numero aleatorio de transaccion
     }
 
     void imprimirRecibo(double monto){
