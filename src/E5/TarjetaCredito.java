@@ -1,4 +1,4 @@
-﻿package E5;
+package E5;
 
 public class TarjetaCredito extends MetodoPago{
     private String fechaExpiracion;
@@ -12,7 +12,7 @@ public class TarjetaCredito extends MetodoPago{
 
     @Override
     public void procesarPago(double monto) {
-        System.out.println("Procesando El Pago con $" + monto + " con Tarjeta De Credito");
+        System.out.println("\nProcesando El Pago con $" + monto + " con Tarjeta De Credito");
         imprimirRecibo(monto);
     }
 }
